@@ -38,7 +38,7 @@ export default function Registration() {
   
       emailjs
         .sendForm('service_t50x8ws', 'template_jkcwkx9', form.current, {
-          publicKey: 'u3Sgtnux4e-dalqW7',
+          publicKey: 'xmvfpmariVx0YMhbC',
         })
         .then(
           () => {
