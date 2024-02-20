@@ -37,7 +37,7 @@ export default function Registration() {
      setLoading(true);
   
       emailjs
-        .sendForm('service_xzsszvq', 'template_e0l2m6f', form.current, {
+        .sendForm('service_t50x8ws', 'template_jkcwkx9', form.current, {
           publicKey: 'u3Sgtnux4e-dalqW7',
         })
         .then(
@@ -112,6 +112,7 @@ export default function Registration() {
       <select className='border outline-none rounded-md bg-gray-100 p-3 cursor-pointer' name='category'>
         <option className='capitalize text-lg'>Adulte</option>
         <option className='capitalize text-lg'>étudiant</option>
+        <option className='capitalize text-lg'>enfant</option>
       </select>
       </div>
       <button type='submit' className="flex justify-center items-center bg-secondary text-white py-4 rounded-md shadow-md font-medium max-w-48">

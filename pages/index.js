@@ -27,7 +27,7 @@ export default function Home() {
    
 
     emailjs
-      .sendForm('service_xzsszvq', 'template_439t9rt', form.current, {
+      .sendForm('service_t50x8ws', 'template_m4pu4xw', form.current, {
         publicKey: 'u3Sgtnux4e-dalqW7',
       })
       .then(
