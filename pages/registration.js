@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from 'react-hook-form';
+import Layout from '@/components/Layout';
 export default function Registration() {
     const form = useRef();
     const[loading,setLoading]=useState(false);
@@ -66,10 +67,9 @@ export default function Registration() {
         document.body.style.overflow = 'initial';
       },[])
   return (
-    <div className='h-screen'>
-    <Header/>
-   <main className='mt-20'>
-   <div className="bg-white w-full py-10 ">
+
+    <Layout>
+    <div className="bg-white w-full py-10 ">
     <div className=" font-bold text-4xl text-center">Inscription</div>
     <form ref={form} onSubmit={handleSubmit(sendEmail)}>
 
@@ -98,12 +98,13 @@ export default function Registration() {
       <div className="flex flex-col gap-2">
       <label className="text-lg">Langue*</label>
       <select className='border outline-none rounded-md bg-gray-100 p-3 cursor-pointer' name='language'>
-        <option className='capitalize text-lg'>française</option>
+      <option className='capitalize text-lg'>Arabe</option>
+        <option className='capitalize text-lg'>Française</option>
         <option className='capitalize text-lg'>Anglaise</option>
-        <option className='capitalize text-lg'>espagnole</option>
-        <option className='capitalize text-lg'>italienne</option>
-        <option className='capitalize text-lg'>allemande</option>
-        <option className='capitalize text-lg'>turque</option>
+        <option className='capitalize text-lg'>Espagnole</option>
+        <option className='capitalize text-lg'>Italienne</option>
+        <option className='capitalize text-lg'>Allemande</option>
+        <option className='capitalize text-lg'>Turque</option>
       </select>
       </div>
 
@@ -127,23 +128,11 @@ export default function Registration() {
 
    
     </div>
-   </main>
-  <Footer/>
+    </Layout>
+    
+   
 
-  <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
-{/* Same as */}
-<ToastContainer />
-  </div>
+  
+ 
   )
 }

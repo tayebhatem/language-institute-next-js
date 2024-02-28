@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaFacebookSquare,FaLinkedin,FaYoutube,FaInstagram } from "react-icons/fa";
 export default function Footer() {
@@ -7,27 +8,27 @@ export default function Footer() {
         <div>
           <h1 className="text-white text-2xl font-semibold">Nos contact</h1>
           <div className="flex gap-4 mt-3 ">
-           <FaFacebookSquare className="text-gray-500 text-3xl"/>
-           <FaLinkedin className="text-gray-500 text-3xl"/>
-           <FaInstagram className="text-gray-500 text-3xl"/>
-           <FaYoutube className="text-gray-500 text-3xl"/>
+           <Link href={'/'}><FaFacebookSquare className="text-gray-500 text-3xl"/></Link>
+           <Link href={'/'}><FaLinkedin className="text-gray-500 text-3xl"/></Link>
+           <Link href={'/'}><FaInstagram className="text-gray-500 text-3xl"/></Link>
+           <Link href={'/'}><FaYoutube className="text-gray-500 text-3xl"/></Link>
           </div>
         </div>
 
         <div>
-          <h1 className="text-white text-2xl font-semibold">Liens</h1>
-          <ul>
-          <li className="text-gray-500 text-lg">Accueil</li>
-        <li className="text-gray-500 text-lg">Enseignants</li>
-        <li className="text-gray-500 text-lg">Administration</li>
-        <li className="text-gray-500 text-lg">Cours</li>
-        <li className="text-gray-500 text-lg">Inscription</li>
+          <h1 className="text-white text-2xl font-semibold pb-2">Liens</h1>
+          <ul className='flex flex-col gap-2'>
+          <li className="text-gray-500 text-lg"><Link href={'/'}>Accueil</Link></li>
+        <li className="text-gray-500 text-lg"><Link href={'/'}>Enseignants</Link></li>
+        <li className="text-gray-500 text-lg"><Link href={'/'}>Administration</Link></li>
+        <li className="text-gray-500 text-lg"><Link href={'/'}>Cours</Link></li>
+        <li className="text-gray-500 text-lg"><Link href={'/registration'}>Inscription</Link></li>
           </ul>
         </div>
 
 
         <div>
-          <h1 className="text-white text-2xl font-semibold">Accueil</h1>
+          <h1 className="text-white text-2xl font-semibold pb-2">Accueil</h1>
           <div className="flex flex-col gap-2">
             <div className="text-gray-500 text-lg">Langues</div>
             <div className="text-gray-500 text-lg">Contactez nous</div>

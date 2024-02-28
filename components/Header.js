@@ -17,7 +17,7 @@ export default function Header() {
   return (
   
         <header className="fixed top-0 flex border-b p-6 w-full z-20 bg-white justify-between">
-    <img src='./logo.png' alt="logo" className="w-40 h-10"/>
+    <Link href={'/'}><img src='./logo.png' alt="amslay" className="w-40 h-10"/></Link>
     <div className="md:hidden cursor-pointer" onClick={show}>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
